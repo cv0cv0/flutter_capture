@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - path_provider (0.0.1):
     - Flutter
-  - permission_handler (2.2.0):
+  - permission_handler (3.0.0):
     - Flutter
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
   path_provider: f96fff6166a8867510d2c25fdcc346327cc4b259
-  permission_handler: 976a8a94c3443d23fe33c11e98277d471f0e543d
+  permission_handler: 047f11d44db785922214783da5f7a3cc8874c843
 
 PODFILE CHECKSUM: ebd43b443038e611b86ede96e613bd6033c49497
 
