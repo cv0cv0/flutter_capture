@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'scrawl_page.dart';
+import '../utils/capture_utils.dart';
 
 class HomePage extends StatelessWidget {
   final _boundaryKey = GlobalKey();
@@ -53,9 +54,7 @@ class HomePage extends StatelessWidget {
   Future _toScrawlPage(BuildContext context) async {
     final boundary =
         _boundaryKey.currentContext.findRenderObject() as RenderRepaintBoundary;
-    final image = await boundary.toImage(pixelRatio: window.devicePixelRatio);
-    final byteData = await image.toByteData(format: ImageByteFormat.png);
-    final uint8List = byteData.buffer.asUint8List();
+    final uint8List = await getUint8List(boundary);
 
     Navigator.of(context).push(
       MaterialPageRoute(builder: (context) => ScrawlPage(uint8List)),
